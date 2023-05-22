@@ -1,4 +1,4 @@
-/* .HeaderWrapper {
+.HeaderWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-} */
+}
 /* 
 padding-top: ${({ theme, user })=>user ? theme.space[1] * 5+'px' : theme.space[1] * 6+'px'
 }
