@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/group_project_6_final/static/css/main.aba07862.css",
-    "main.js": "/group_project_6_final/static/js/main.af5249f6.js",
+    "main.css": "/group_project_6_final/static/css/main.c0e7e09d.css",
+    "main.js": "/group_project_6_final/static/js/main.d598e8b5.js",
     "static/css/412.ce37c4e7.chunk.css": "/group_project_6_final/static/css/412.ce37c4e7.chunk.css",
     "static/js/412.42741c81.chunk.js": "/group_project_6_final/static/js/412.42741c81.chunk.js",
     "static/js/199.edd2b5b2.chunk.js": "/group_project_6_final/static/js/199.edd2b5b2.chunk.js",
@@ -35,12 +35,13 @@
     "static/media/logo.svg": "/group_project_6_final/static/media/logo.6e2f51eeb062dc6472f5e4aa1de019f4.svg",
     "static/media/bg_tablet2x.png": "/group_project_6_final/static/media/bg_tablet2x.fa1f7b2125f63bd4d24a.png",
     "static/media/bg_mobile2x.png": "/group_project_6_final/static/media/bg_mobile2x.678a492847b0e788bf16.png",
+    "static/media/pawprint.svg": "/group_project_6_final/static/media/pawprint.d2f95d20bc7e7b593ea2bc81c1f27c5d.svg",
     "index.html": "/group_project_6_final/index.html",
     "static/media/arrow-left.svg": "/group_project_6_final/static/media/arrow-left.c3e27e6eb955be54dd02f81a953cd0b5.svg",
     "static/media/plus-small.svg": "/group_project_6_final/static/media/plus-small.8f4cdcf82c51104eb8cf75bc1ea7d468.svg",
     "static/media/plus.svg": "/group_project_6_final/static/media/plus.82f4622ce65fb42acb45c3cd956c8148.svg",
-    "main.aba07862.css.map": "/group_project_6_final/static/css/main.aba07862.css.map",
-    "main.af5249f6.js.map": "/group_project_6_final/static/js/main.af5249f6.js.map",
+    "main.c0e7e09d.css.map": "/group_project_6_final/static/css/main.c0e7e09d.css.map",
+    "main.d598e8b5.js.map": "/group_project_6_final/static/js/main.d598e8b5.js.map",
     "412.ce37c4e7.chunk.css.map": "/group_project_6_final/static/css/412.ce37c4e7.chunk.css.map",
     "412.42741c81.chunk.js.map": "/group_project_6_final/static/js/412.42741c81.chunk.js.map",
     "199.edd2b5b2.chunk.js.map": "/group_project_6_final/static/js/199.edd2b5b2.chunk.js.map",
@@ -62,7 +63,7 @@
     "651.70d87cd1.chunk.js.map": "/group_project_6_final/static/js/651.70d87cd1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aba07862.css",
-    "static/js/main.af5249f6.js"
+    "static/css/main.c0e7e09d.css",
+    "static/js/main.d598e8b5.js"
   ]
 }
