@@ -7,6 +7,8 @@
     margin-bottom: 15px;
 }
 
+.container {}
+
 .edit {
     display: flex;
     justify-content: center;
@@ -19,7 +21,7 @@
     }
 }
 
-.labelPhoto {
+.label {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.83;
@@ -36,7 +38,7 @@
         cursor: context-menu;
 }
 
-.inputHidden {
+.input {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
@@ -57,11 +59,4 @@
         flex-direction: row-reverse;
     }
 
-}
-
-.buttonUploadHidden {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
 }

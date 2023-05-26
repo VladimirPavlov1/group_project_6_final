@@ -1,18 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
-import userPhoto from '../../../image/user-photo-default.png';
 
 const initialState = {
   name: '',
-  email: 'vikit2000@ukr.net',
+  email: '',
   birthday: '',
   phone: '',
   city: '',
-  avatar: userPhoto,
+  avatar: null,
 };
 
 const userSlice = createSlice({
     name: 'user',
-  initialState,
+    initialState,
     extraReducers: builder => {
 
     }
