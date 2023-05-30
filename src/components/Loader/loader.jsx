@@ -42,6 +42,7 @@ const PawIcon = () => {
 };
 
 const Loader = () => {
+  
   return (
     <>
       <LoaderContainer>

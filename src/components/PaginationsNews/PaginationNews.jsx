@@ -1,5 +1,5 @@
-import css from '../Paginations/Pagination.module.css';
-import icons from '../../image/icons';
+import css from '../PaginationsNews/PaginationNews.module.css';
+/* import icons from '../../image/icons'; */
 
 
 const Pagination = ({
@@ -52,7 +52,7 @@ const Pagination = ({
 
                             <svg width = {17} height = {17} className={css.PaginationsSvg} >
                       
-                                <use href = {icons + '#iconPagLeft'} />
+                                {/* <use href = {icons + '#iconPagLeft'} /> */}
                       
                             </svg>
                         </button>
@@ -88,7 +88,7 @@ const Pagination = ({
                             
                             <svg width={17} height={17} className={css.paginationsSvg}>
                       
-                                <use href={icons + '#iconPagRight'} />
+                                {/* <use href={icons + '#iconPagRight'} /> */}
                       
                             </svg>
                         </button>

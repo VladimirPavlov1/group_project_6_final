@@ -1,6 +1,6 @@
 import css from '../ModalNotice/ModalNotice.module.css';
 import icons from '../../image/icons';
-import Loader from '../Loader/Loader';
+import {Loader} from '../Loader/loader';
 
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -35,7 +35,7 @@ const ModalNotice = ({ item, categoryName, handleAddOrDeleteFavorite, }) => {
 
         <div className={css.containerNotice}>
 
-            {Loader}
+            {<Loader/>}
 
             <div className={css.coverNotice}>
 

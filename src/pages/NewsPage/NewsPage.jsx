@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useMemo } from 'react';
 
-import Loader from '../../components/Loader';
-import fetchNews from '../../helpers';
-import { sortNewsByDate } from 'helpers/sortNewsByDate';
+import Loader from '../../components/Loader/loader';
+import {fetchNews} from '../../helpers';
+import { sortNewsByDate } from '../../helpers';
 import NewsList from '../../components/News/NewsList';
-import SearchField from '../../components/SearchField';
+import SearchField from '../../components/SearchField/SearchField';
 import { useSearchParams } from 'react-router-dom';
-import { Pagination } from '../../components/PaginationsNews';
+import Pagination from '../../components/PaginationsNews/PaginationNews';
 import { notify } from '../../helpers';
 
 import css from '../NewsPage/NewsPage.module.css';
