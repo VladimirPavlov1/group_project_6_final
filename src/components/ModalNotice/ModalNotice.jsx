@@ -1,5 +1,5 @@
 import css from '../ModalNotice/ModalNotice.module.css';
-import icons from '../../image/icons';
+import { ReactComponent as HeartIcon } from 'image/icons/heart.svg';
 import {Loader} from '../Loader/loader';
 
 import { useEffect } from 'react';
@@ -171,12 +171,8 @@ const ModalNotice = ({ item, categoryName, handleAddOrDeleteFavorite, }) => {
                         'Remove from'
                     }
                       
-                    <svg width={24} height={24} className={css.noticeLikedSvg}>
-                      
-                        <use href={icons + '#heart'} />
-                      
-                    </svg>
-               
+                    <HeartIcon className={css['noticeLikedSvg']} />
+                    
                 </button>
             </div>
 

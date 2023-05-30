@@ -1,6 +1,6 @@
 import css from '../PaginationsNews/PaginationNews.module.css';
-/* import icons from '../../image/icons'; */
-
+import { ReactComponent as PagLeftIcon } from 'image/icons/iconPagLeft.svg';
+import { ReactComponent as PagRightIcon } from 'image/icons/iconPagRight.svg';
 
 const Pagination = ({
 
@@ -48,13 +48,10 @@ const Pagination = ({
                         <button className={css.btnPaginations.btnPaginationsArrow}
                             
                             onClick = {() => handlePageChange(currentPage - 1)}
-                            disabled = {currentPage === 1} > 
+                            disabled={currentPage === 1} > 
+                            
+                            <PagLeftIcon className={css['paginationsSvg']} />
 
-                            <svg width = {17} height = {17} className={css.PaginationsSvg} >
-                      
-                                {/* <use href = {icons + '#iconPagLeft'} /> */}
-                      
-                            </svg>
                         </button>
                     </li>
 
@@ -86,11 +83,8 @@ const Pagination = ({
                             onClick={() => handlePageChange(currentPage + 1)}
                             disabled={currentPage === totalPages}>
                             
-                            <svg width={17} height={17} className={css.paginationsSvg}>
-                      
-                                {/* <use href={icons + '#iconPagRight'} /> */}
-                      
-                            </svg>
+                            <PagRightIcon className={css['paginationsSvg']} />
+
                         </button>
                     </li>
                 </ul>
