@@ -71,7 +71,7 @@ export const getNoticeById = createAsyncThunk(
   'notices/getNoticeById',
   async (_id, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/notices/notice/${_id}`);
+      const { data } = await axios.get(`/notices/${_id}`);
 
       return data.result;
     } catch (error) {
@@ -83,12 +83,13 @@ export const getNoticeById = createAsyncThunk(
 
 export const addNotice = createAsyncThunk(
   'notices/addNotice',
-  async ({ category, formData }, { rejectWithValue }) => {
-    try {
-            console.log(formData)
-            console.log(category)
-      await axios.post(`/notices/${category}`, formData);
+  async ( newFormData , { rejectWithValue }) => {
+    try { 
+
+      await axios.post('/notices', newFormData);
+
     } catch (error) {
+
       return rejectWithValue(error.message);
     }
   }

@@ -6,9 +6,9 @@ const ageDeterminationFunc = bd => {
   const birthdate = Date.parse(date);
 
   const diff = now.getTime() - birthdate;
-  console.log('diff', diff);
+  // console.log('diff', diff);
   const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-  console.log('years', years);
+  // console.log('years', years);
   const months = Math.floor(
     (diff % (1000 * 60 * 60 * 24 * 365.25)) /
       (1000 * 60 * 60 * 24 * (365.25 / 12))

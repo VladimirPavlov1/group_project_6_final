@@ -12,7 +12,7 @@ export const validatePetSchema = yup.object().shape({
     .required('Name is required')
     .min(2, 'Name must be at least 2 characters')
     .max(16, 'Name must not exceed 16 characters'),
-  birthday: yup.string()
+  date: yup.string()
     .required('Date is required')
     .matches(
       /^(\d{2})\.(\d{2})\.(\d{4})$/,

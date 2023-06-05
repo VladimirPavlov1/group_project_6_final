@@ -145,7 +145,7 @@ const MoreInfo = ({ formData, setFormData, submit, backStep }) => {
               : 'Load the pet’s image:'}
             <AddFormImageWrapper>
               {!formData.file && <PlusIcon width="30" height="30" />}
-              {!!formData.file && (
+              {formData.file && (
                 <img
                   id="image"
                   src={URL.createObjectURL(formData.file)}
@@ -161,6 +161,7 @@ const MoreInfo = ({ formData, setFormData, submit, backStep }) => {
               onChange={handleInputChange}
               value={imageValue}
               onBlur={() => validateField('file', formData, setErrors)}
+              multiple
             />
           </AddFormImageLabel>
         </FirstPartFormWrapper>

@@ -31,7 +31,7 @@ const AddPetPageForm = () => {
     category: '',
     name: '',
     title: '',
-    birthday: '',
+    date: '',
     breed: '',
     location: '',
     comments: '',
@@ -88,20 +88,26 @@ const AddPetPageForm = () => {
   };
 
   const handleSubmit = async () => {
-    // console.log(formData)
-    // console.log(formData.category)
+ 
     if (!formData.category) return;
 
     const newFormData = new FormData();
 
+
+    
     newFormData.append('name', formData.name);
-    newFormData.append('birthday', formData.birthday);
+    newFormData.append('date', formData.date);
     newFormData.append('breed', formData.breed);
     newFormData.append('file', formData.file);
-    // for (const value of newFormData.values()) {
-    //   console.log(value);
-    // }
-    //   console.log(formData.file.name);
+
+    for (const value of newFormData.values()) {
+       
+      console.log(value);
+    }
+    for (const key of newFormData.keys()) {
+      console.log(key);
+    }
+   
 
     if (formData.comments) {
       newFormData.append('comments', formData.comments);
@@ -113,18 +119,22 @@ const AddPetPageForm = () => {
       return;
     }
 
-    newFormData.append('titleOfAdd', formData.title);
+    newFormData.append('title', formData.title);
     newFormData.append('sex', formData.sex);
     newFormData.append('location', formData.location);
 
     if (formData.category === 'lost-found') {
-      dispatch(addNotice({ category: 'lost-found', formData }));
+      newFormData.append('category',formData.category);
+
+      dispatch(addNotice(newFormData));
       toggleModal();
       return;
     }
 
     if (formData.category === 'for-free') {
-      dispatch(addNotice({ category: 'in-good-hands', formData }));
+      newFormData.append('category',formData.category);
+
+      dispatch(addNotice( newFormData ));
       toggleModal();
       return;
     }
@@ -132,7 +142,19 @@ const AddPetPageForm = () => {
     newFormData.append('price', formData.price);
 
     if (formData.category === 'sell') {
-      dispatch(addNotice({ category: formData.category, formData }));
+
+   
+      newFormData.append('category',formData.category);
+
+      // for (const value of newFormData.values()) {
+       
+      //   console.log(value);
+      // }
+      // for (const key of newFormData.keys()) {
+      //   console.log(key);
+      // }
+
+      dispatch(addNotice(newFormData));
       toggleModal();
     }
     

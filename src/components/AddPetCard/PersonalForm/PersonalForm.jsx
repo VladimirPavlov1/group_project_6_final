@@ -18,14 +18,14 @@ const PersonalForm = ({ formData, setFormData, nextStep, backStep }) => {
 
 
   const isNameFieldValid = Boolean(!errors.name && !!formData.name);
-  const isBirthdayFieldValid = Boolean(!errors.birthday && !!formData.birthday);
+  const isdateFieldValid = Boolean(!errors.date && !!formData.date);
   const isBreedFieldValid = Boolean(!errors.breed && !!formData.breed);
   const isTitleFieldValid = Boolean(!errors.title && !!formData.title);
 
    useEffect(() => {
     if (formData.category === 'my-pet') {
       setIsDisabled(
-        !(isNameFieldValid && isBirthdayFieldValid && isBreedFieldValid)
+        !(isNameFieldValid && isdateFieldValid && isBreedFieldValid)
       );
     }
 
@@ -33,7 +33,7 @@ const PersonalForm = ({ formData, setFormData, nextStep, backStep }) => {
       setIsDisabled(
         !(
           isNameFieldValid &&
-          isBirthdayFieldValid &&
+          isdateFieldValid &&
           isBreedFieldValid &&
           isTitleFieldValid
         )
@@ -43,7 +43,7 @@ const PersonalForm = ({ formData, setFormData, nextStep, backStep }) => {
   }, [
     errors,
     formData.category,
-    isBirthdayFieldValid,
+    isdateFieldValid,
     isBreedFieldValid,
     isNameFieldValid,
     isTitleFieldValid,
@@ -63,7 +63,7 @@ const PersonalForm = ({ formData, setFormData, nextStep, backStep }) => {
     setErrors(prevState => ({ ...prevState, [name]: '' }));
 
     const inputValue =
-      name === 'birthday'
+      name === 'date'
         ? new Date(value).toLocaleDateString('uk-UA', {
             day: '2-digit',
             month: '2-digit',
@@ -112,21 +112,21 @@ const PersonalForm = ({ formData, setFormData, nextStep, backStep }) => {
         {!!errors.name && <ErrorMessage message={errors.name} />}
       </AddFormLabelWrapper>
       <AddFormLabelWrapper>
-        <AddFormLabel htmlFor="birthday">
+        <AddFormLabel htmlFor="date">
           Birthday:
           <AddFormInput
             placeholder="Type date of birth"
             type="date"
-            name="birthday"
+            name="date"
             data-pattern="**.**.****"
             max={maxDate}
             onChange={handleInputChange}
-            value={formData.birthday.split('.').reverse().join('-')}
-            onBlur={() => validateField('birthday', formData, setErrors)}
-            className={errors.birthday ? 'invalid' : ''}
+            value={formData.date.split('.').reverse().join('-')}
+            onBlur={() => validateField('date', formData, setErrors)}
+            className={errors.date ? 'invalid' : ''}
           />
         </AddFormLabel>
-        {!!errors.birthday && <ErrorMessage message={errors.birthday} />}
+        {!!errors.date && <ErrorMessage message={errors.date} />}
       </AddFormLabelWrapper>
       <AddFormLabelWrapper>
         <AddFormLabel htmlFor="breed">
